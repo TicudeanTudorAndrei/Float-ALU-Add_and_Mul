@@ -1,0 +1,1276 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Jan 16 06:22:54 2025
+| Host         : DESKTOP-F4G4IM7 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file TopLevelModule_timing_summary_routed.rpt -pb TopLevelModule_timing_summary_routed.pb -rpx TopLevelModule_timing_summary_routed.rpx -warn_on_violation
+| Design       : TopLevelModule
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  540         
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (540)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (1149)
+5. checking no_input_delay (67)
+6. checking no_output_delay (66)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (540)
+--------------------------
+ There are 540 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (1149)
+---------------------------------------------------
+ There are 1149 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (67)
+-------------------------------
+ There are 67 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (66)
+--------------------------------
+ There are 66 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                 1215          inf        0.000                      0                 1215           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay          1215 Endpoints
+Min Delay          1215 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[46]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        41.907ns  (logic 5.044ns (12.036%)  route 36.863ns (87.964%))
+  Logic Levels:           38  (FDRE=1 LUT4=1 LUT6=36)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.975    36.710    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X32Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.834 r  MultiplierInst/result_mantissa[39]_i_4/O
+                         net (fo=3, routed)           0.984    37.818    MultiplierInst/MULTIPL/sumator22/cin27_out
+    SLICE_X29Y107        LUT6 (Prop_lut6_I2_O)        0.124    37.942 r  MultiplierInst/result_mantissa[40]_i_2/O
+                         net (fo=3, routed)           0.815    38.757    MultiplierInst/MULTIPL/s22[17]
+    SLICE_X29Y106        LUT6 (Prop_lut6_I3_O)        0.124    38.881 r  MultiplierInst/result_mantissa[42]_i_3/O
+                         net (fo=3, routed)           0.823    39.704    MultiplierInst/MULTIPL/sumator23/cin31_out
+    SLICE_X31Y106        LUT6 (Prop_lut6_I5_O)        0.124    39.828 r  MultiplierInst/result_mantissa[44]_i_3/O
+                         net (fo=3, routed)           0.801    40.629    MultiplierInst/MULTIPL/sumator23/cin35_out
+    SLICE_X32Y106        LUT6 (Prop_lut6_I5_O)        0.124    40.753 r  MultiplierInst/result_mantissa[47]_i_3/O
+                         net (fo=2, routed)           0.417    41.170    MultiplierInst/MULTIPL/sumator23/cin39_out
+    SLICE_X35Y105        LUT4 (Prop_lut4_I3_O)        0.124    41.294 r  MultiplierInst/result_mantissa[46]_i_1/O
+                         net (fo=1, routed)           0.613    41.907    MultiplierInst/r[45]
+    SLICE_X35Y103        FDRE                                         r  MultiplierInst/result_mantissa_reg[46]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[45]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        41.698ns  (logic 5.240ns (12.567%)  route 36.458ns (87.433%))
+  Logic Levels:           38  (FDRE=1 LUT4=1 LUT6=36)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.975    36.710    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X32Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.834 r  MultiplierInst/result_mantissa[39]_i_4/O
+                         net (fo=3, routed)           0.984    37.818    MultiplierInst/MULTIPL/sumator22/cin27_out
+    SLICE_X29Y107        LUT6 (Prop_lut6_I2_O)        0.124    37.942 r  MultiplierInst/result_mantissa[40]_i_2/O
+                         net (fo=3, routed)           0.815    38.757    MultiplierInst/MULTIPL/s22[17]
+    SLICE_X29Y106        LUT6 (Prop_lut6_I3_O)        0.124    38.881 r  MultiplierInst/result_mantissa[42]_i_3/O
+                         net (fo=3, routed)           0.823    39.704    MultiplierInst/MULTIPL/sumator23/cin31_out
+    SLICE_X31Y106        LUT6 (Prop_lut6_I5_O)        0.124    39.828 r  MultiplierInst/result_mantissa[44]_i_3/O
+                         net (fo=3, routed)           0.485    40.313    MultiplierInst/MULTIPL/sumator23/cin35_out
+    SLICE_X31Y106        LUT4 (Prop_lut4_I3_O)        0.118    40.431 r  MultiplierInst/result_mantissa[45]_i_5/O
+                         net (fo=1, routed)           0.941    41.372    MultiplierInst/MULTIPL/sumator23/cin37_out
+    SLICE_X31Y105        LUT6 (Prop_lut6_I5_O)        0.326    41.698 r  MultiplierInst/result_mantissa[45]_i_1/O
+                         net (fo=1, routed)           0.000    41.698    MultiplierInst/r[44]
+    SLICE_X31Y105        FDRE                                         r  MultiplierInst/result_mantissa_reg[45]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[47]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        41.473ns  (logic 5.044ns (12.162%)  route 36.429ns (87.838%))
+  Logic Levels:           38  (FDRE=1 LUT6=37)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.975    36.710    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X32Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.834 r  MultiplierInst/result_mantissa[39]_i_4/O
+                         net (fo=3, routed)           0.984    37.818    MultiplierInst/MULTIPL/sumator22/cin27_out
+    SLICE_X29Y107        LUT6 (Prop_lut6_I2_O)        0.124    37.942 r  MultiplierInst/result_mantissa[40]_i_2/O
+                         net (fo=3, routed)           0.815    38.757    MultiplierInst/MULTIPL/s22[17]
+    SLICE_X29Y106        LUT6 (Prop_lut6_I3_O)        0.124    38.881 r  MultiplierInst/result_mantissa[42]_i_3/O
+                         net (fo=3, routed)           0.823    39.704    MultiplierInst/MULTIPL/sumator23/cin31_out
+    SLICE_X31Y106        LUT6 (Prop_lut6_I5_O)        0.124    39.828 r  MultiplierInst/result_mantissa[44]_i_3/O
+                         net (fo=3, routed)           0.801    40.629    MultiplierInst/MULTIPL/sumator23/cin35_out
+    SLICE_X32Y106        LUT6 (Prop_lut6_I5_O)        0.124    40.753 r  MultiplierInst/result_mantissa[47]_i_3/O
+                         net (fo=2, routed)           0.597    41.349    MultiplierInst/MULTIPL/sumator23/cin39_out
+    SLICE_X32Y105        LUT6 (Prop_lut6_I1_O)        0.124    41.473 r  MultiplierInst/result_mantissa[47]_i_2/O
+                         net (fo=1, routed)           0.000    41.473    MultiplierInst/r[46]
+    SLICE_X32Y105        FDRE                                         r  MultiplierInst/result_mantissa_reg[47]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[43]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        41.017ns  (logic 5.148ns (12.551%)  route 35.869ns (87.449%))
+  Logic Levels:           37  (FDRE=1 LUT4=1 LUT6=35)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           0.859    11.490    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X45Y108        LUT6 (Prop_lut6_I5_O)        0.124    11.614 r  MultiplierInst/result_mantissa[25]_i_324/O
+                         net (fo=4, routed)           0.821    12.435    MultiplierInst/MULTIPL/sumator6/cin15_out
+    SLICE_X44Y109        LUT6 (Prop_lut6_I5_O)        0.124    12.559 r  MultiplierInst/result_mantissa[25]_i_329/O
+                         net (fo=4, routed)           1.005    13.564    MultiplierInst/MULTIPL/sumator6/cin19_out
+    SLICE_X42Y109        LUT6 (Prop_lut6_I3_O)        0.124    13.688 r  MultiplierInst/result_mantissa[25]_i_283/O
+                         net (fo=5, routed)           0.965    14.654    MultiplierInst/MULTIPL/s6[13]
+    SLICE_X43Y111        LUT6 (Prop_lut6_I0_O)        0.124    14.778 r  MultiplierInst/result_mantissa[25]_i_242/O
+                         net (fo=3, routed)           0.830    15.607    MultiplierInst/MULTIPL/sumator7/cin21_out
+    SLICE_X43Y110        LUT6 (Prop_lut6_I5_O)        0.124    15.731 r  MultiplierInst/result_mantissa[26]_i_106/O
+                         net (fo=3, routed)           1.053    16.784    MultiplierInst/MULTIPL/sumator7/cin25_out
+    SLICE_X41Y110        LUT6 (Prop_lut6_I2_O)        0.124    16.908 r  MultiplierInst/result_mantissa[26]_i_100/O
+                         net (fo=4, routed)           1.039    17.947    MultiplierInst/MULTIPL/s7[16]
+    SLICE_X42Y113        LUT6 (Prop_lut6_I1_O)        0.124    18.071 r  MultiplierInst/result_mantissa[26]_i_90/O
+                         net (fo=2, routed)           0.948    19.020    MultiplierInst/result_mantissa[26]_i_90_n_0
+    SLICE_X45Y115        LUT6 (Prop_lut6_I0_O)        0.124    19.144 r  MultiplierInst/result_mantissa[26]_i_84/O
+                         net (fo=3, routed)           0.971    20.115    MultiplierInst/MULTIPL/s10[14]
+    SLICE_X44Y118        LUT6 (Prop_lut6_I0_O)        0.124    20.239 r  MultiplierInst/result_mantissa[27]_i_43/O
+                         net (fo=6, routed)           0.983    21.222    MultiplierInst/MULTIPL/sumator11/cin23_out
+    SLICE_X41Y118        LUT6 (Prop_lut6_I2_O)        0.124    21.346 r  MultiplierInst/result_mantissa[29]_i_82/O
+                         net (fo=4, routed)           1.245    22.591    MultiplierInst/MULTIPL/s11[15]
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.715 r  MultiplierInst/result_mantissa[29]_i_80/O
+                         net (fo=4, routed)           0.667    23.381    MultiplierInst/MULTIPL/sumator12/cin27_out
+    SLICE_X40Y121        LUT6 (Prop_lut6_I5_O)        0.124    23.505 r  MultiplierInst/result_mantissa[31]_i_61/O
+                         net (fo=4, routed)           1.453    24.958    MultiplierInst/MULTIPL/sumator12/cin31_out
+    SLICE_X38Y118        LUT6 (Prop_lut6_I5_O)        0.124    25.082 r  MultiplierInst/result_mantissa[33]_i_61/O
+                         net (fo=4, routed)           0.988    26.070    MultiplierInst/MULTIPL/sumator12/cin35_out
+    SLICE_X37Y119        LUT6 (Prop_lut6_I1_O)        0.124    26.194 r  MultiplierInst/result_mantissa[33]_i_54/O
+                         net (fo=3, routed)           0.670    26.864    MultiplierInst/MULTIPL/s13[19]
+    SLICE_X34Y119        LUT6 (Prop_lut6_I0_O)        0.124    26.988 r  MultiplierInst/result_mantissa[35]_i_45/O
+                         net (fo=6, routed)           1.186    28.174    MultiplierInst/MULTIPL/sumator14/cin33_out
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.298 r  MultiplierInst/result_mantissa[35]_i_40/O
+                         net (fo=4, routed)           1.131    29.428    MultiplierInst/MULTIPL/sumator15/cin33_out
+    SLICE_X33Y118        LUT6 (Prop_lut6_I3_O)        0.124    29.552 r  MultiplierInst/result_mantissa[37]_i_36/O
+                         net (fo=5, routed)           0.985    30.537    MultiplierInst/MULTIPL/s15[20]
+    SLICE_X28Y118        LUT6 (Prop_lut6_I3_O)        0.124    30.661 r  MultiplierInst/result_mantissa[39]_i_37/O
+                         net (fo=1, routed)           1.096    31.757    MultiplierInst/MULTIPL/sumator16/cin37_out
+    SLICE_X31Y116        LUT6 (Prop_lut6_I3_O)        0.124    31.881 r  MultiplierInst/result_mantissa[39]_i_29/O
+                         net (fo=3, routed)           0.804    32.685    MultiplierInst/MULTIPL/s16[22]
+    SLICE_X29Y115        LUT6 (Prop_lut6_I0_O)        0.124    32.809 r  MultiplierInst/result_mantissa[47]_i_48/O
+                         net (fo=4, routed)           1.069    33.877    MultiplierInst/MULTIPL/s17[21]
+    SLICE_X30Y115        LUT6 (Prop_lut6_I5_O)        0.124    34.001 r  MultiplierInst/result_mantissa[47]_i_32/O
+                         net (fo=5, routed)           1.290    35.291    MultiplierInst/MULTIPL/s18[21]
+    SLICE_X31Y112        LUT6 (Prop_lut6_I5_O)        0.124    35.415 r  MultiplierInst/result_mantissa[41]_i_10/O
+                         net (fo=3, routed)           1.121    36.537    MultiplierInst/MULTIPL/s19[21]
+    SLICE_X29Y109        LUT6 (Prop_lut6_I0_O)        0.124    36.661 r  MultiplierInst/result_mantissa[47]_i_21/O
+                         net (fo=7, routed)           0.839    37.500    MultiplierInst/MULTIPL/sumator20/cin37_out
+    SLICE_X29Y108        LUT6 (Prop_lut6_I1_O)        0.124    37.624 r  MultiplierInst/result_mantissa[43]_i_9/O
+                         net (fo=4, routed)           1.181    38.804    MultiplierInst/MULTIPL/s21[20]
+    SLICE_X30Y106        LUT6 (Prop_lut6_I0_O)        0.124    38.928 r  MultiplierInst/result_mantissa[42]_i_2/O
+                         net (fo=3, routed)           0.948    39.877    MultiplierInst/MULTIPL/s22[19]
+    SLICE_X31Y104        LUT4 (Prop_lut4_I0_O)        0.150    40.027 r  MultiplierInst/result_mantissa[43]_i_5/O
+                         net (fo=1, routed)           0.665    40.691    MultiplierInst/MULTIPL/sumator23/cin33_out
+    SLICE_X30Y105        LUT6 (Prop_lut6_I5_O)        0.326    41.017 r  MultiplierInst/result_mantissa[43]_i_1/O
+                         net (fo=1, routed)           0.000    41.017    MultiplierInst/r[42]
+    SLICE_X30Y105        FDRE                                         r  MultiplierInst/result_mantissa_reg[43]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[44]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        40.437ns  (logic 4.920ns (12.167%)  route 35.517ns (87.833%))
+  Logic Levels:           37  (FDRE=1 LUT4=1 LUT6=35)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.975    36.710    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X32Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.834 r  MultiplierInst/result_mantissa[39]_i_4/O
+                         net (fo=3, routed)           0.984    37.818    MultiplierInst/MULTIPL/sumator22/cin27_out
+    SLICE_X29Y107        LUT6 (Prop_lut6_I2_O)        0.124    37.942 r  MultiplierInst/result_mantissa[40]_i_2/O
+                         net (fo=3, routed)           0.815    38.757    MultiplierInst/MULTIPL/s22[17]
+    SLICE_X29Y106        LUT6 (Prop_lut6_I3_O)        0.124    38.881 r  MultiplierInst/result_mantissa[42]_i_3/O
+                         net (fo=3, routed)           0.823    39.704    MultiplierInst/MULTIPL/sumator23/cin31_out
+    SLICE_X31Y106        LUT6 (Prop_lut6_I5_O)        0.124    39.828 r  MultiplierInst/result_mantissa[44]_i_3/O
+                         net (fo=3, routed)           0.485    40.313    MultiplierInst/MULTIPL/sumator23/cin35_out
+    SLICE_X31Y106        LUT4 (Prop_lut4_I3_O)        0.124    40.437 r  MultiplierInst/result_mantissa[44]_i_1/O
+                         net (fo=1, routed)           0.000    40.437    MultiplierInst/r[43]
+    SLICE_X31Y106        FDRE                                         r  MultiplierInst/result_mantissa_reg[44]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[42]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        40.338ns  (logic 4.796ns (11.890%)  route 35.542ns (88.110%))
+  Logic Levels:           36  (FDRE=1 LUT4=1 LUT6=34)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           0.859    11.490    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X45Y108        LUT6 (Prop_lut6_I5_O)        0.124    11.614 r  MultiplierInst/result_mantissa[25]_i_324/O
+                         net (fo=4, routed)           0.821    12.435    MultiplierInst/MULTIPL/sumator6/cin15_out
+    SLICE_X44Y109        LUT6 (Prop_lut6_I5_O)        0.124    12.559 r  MultiplierInst/result_mantissa[25]_i_329/O
+                         net (fo=4, routed)           1.005    13.564    MultiplierInst/MULTIPL/sumator6/cin19_out
+    SLICE_X42Y109        LUT6 (Prop_lut6_I3_O)        0.124    13.688 r  MultiplierInst/result_mantissa[25]_i_283/O
+                         net (fo=5, routed)           0.965    14.654    MultiplierInst/MULTIPL/s6[13]
+    SLICE_X43Y111        LUT6 (Prop_lut6_I0_O)        0.124    14.778 r  MultiplierInst/result_mantissa[25]_i_242/O
+                         net (fo=3, routed)           0.830    15.607    MultiplierInst/MULTIPL/sumator7/cin21_out
+    SLICE_X43Y110        LUT6 (Prop_lut6_I5_O)        0.124    15.731 r  MultiplierInst/result_mantissa[26]_i_106/O
+                         net (fo=3, routed)           1.053    16.784    MultiplierInst/MULTIPL/sumator7/cin25_out
+    SLICE_X41Y110        LUT6 (Prop_lut6_I2_O)        0.124    16.908 r  MultiplierInst/result_mantissa[26]_i_100/O
+                         net (fo=4, routed)           1.039    17.947    MultiplierInst/MULTIPL/s7[16]
+    SLICE_X42Y113        LUT6 (Prop_lut6_I1_O)        0.124    18.071 r  MultiplierInst/result_mantissa[26]_i_90/O
+                         net (fo=2, routed)           0.948    19.020    MultiplierInst/result_mantissa[26]_i_90_n_0
+    SLICE_X45Y115        LUT6 (Prop_lut6_I0_O)        0.124    19.144 r  MultiplierInst/result_mantissa[26]_i_84/O
+                         net (fo=3, routed)           0.971    20.115    MultiplierInst/MULTIPL/s10[14]
+    SLICE_X44Y118        LUT6 (Prop_lut6_I0_O)        0.124    20.239 r  MultiplierInst/result_mantissa[27]_i_43/O
+                         net (fo=6, routed)           0.983    21.222    MultiplierInst/MULTIPL/sumator11/cin23_out
+    SLICE_X41Y118        LUT6 (Prop_lut6_I2_O)        0.124    21.346 r  MultiplierInst/result_mantissa[29]_i_82/O
+                         net (fo=4, routed)           1.245    22.591    MultiplierInst/MULTIPL/s11[15]
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.715 r  MultiplierInst/result_mantissa[29]_i_80/O
+                         net (fo=4, routed)           0.667    23.381    MultiplierInst/MULTIPL/sumator12/cin27_out
+    SLICE_X40Y121        LUT6 (Prop_lut6_I5_O)        0.124    23.505 r  MultiplierInst/result_mantissa[31]_i_61/O
+                         net (fo=4, routed)           1.453    24.958    MultiplierInst/MULTIPL/sumator12/cin31_out
+    SLICE_X38Y118        LUT6 (Prop_lut6_I5_O)        0.124    25.082 r  MultiplierInst/result_mantissa[33]_i_61/O
+                         net (fo=4, routed)           0.988    26.070    MultiplierInst/MULTIPL/sumator12/cin35_out
+    SLICE_X37Y119        LUT6 (Prop_lut6_I1_O)        0.124    26.194 r  MultiplierInst/result_mantissa[33]_i_54/O
+                         net (fo=3, routed)           0.670    26.864    MultiplierInst/MULTIPL/s13[19]
+    SLICE_X34Y119        LUT6 (Prop_lut6_I0_O)        0.124    26.988 r  MultiplierInst/result_mantissa[35]_i_45/O
+                         net (fo=6, routed)           1.186    28.174    MultiplierInst/MULTIPL/sumator14/cin33_out
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.298 r  MultiplierInst/result_mantissa[35]_i_40/O
+                         net (fo=4, routed)           1.131    29.428    MultiplierInst/MULTIPL/sumator15/cin33_out
+    SLICE_X33Y118        LUT6 (Prop_lut6_I3_O)        0.124    29.552 r  MultiplierInst/result_mantissa[37]_i_36/O
+                         net (fo=5, routed)           0.985    30.537    MultiplierInst/MULTIPL/s15[20]
+    SLICE_X28Y118        LUT6 (Prop_lut6_I3_O)        0.124    30.661 r  MultiplierInst/result_mantissa[39]_i_37/O
+                         net (fo=1, routed)           1.096    31.757    MultiplierInst/MULTIPL/sumator16/cin37_out
+    SLICE_X31Y116        LUT6 (Prop_lut6_I3_O)        0.124    31.881 r  MultiplierInst/result_mantissa[39]_i_29/O
+                         net (fo=3, routed)           0.804    32.685    MultiplierInst/MULTIPL/s16[22]
+    SLICE_X29Y115        LUT6 (Prop_lut6_I0_O)        0.124    32.809 r  MultiplierInst/result_mantissa[47]_i_48/O
+                         net (fo=4, routed)           1.069    33.877    MultiplierInst/MULTIPL/s17[21]
+    SLICE_X30Y115        LUT6 (Prop_lut6_I5_O)        0.124    34.001 r  MultiplierInst/result_mantissa[47]_i_32/O
+                         net (fo=5, routed)           1.290    35.291    MultiplierInst/MULTIPL/s18[21]
+    SLICE_X31Y112        LUT6 (Prop_lut6_I5_O)        0.124    35.415 r  MultiplierInst/result_mantissa[41]_i_10/O
+                         net (fo=3, routed)           1.121    36.537    MultiplierInst/MULTIPL/s19[21]
+    SLICE_X29Y109        LUT6 (Prop_lut6_I0_O)        0.124    36.661 r  MultiplierInst/result_mantissa[47]_i_21/O
+                         net (fo=7, routed)           0.839    37.500    MultiplierInst/MULTIPL/sumator20/cin37_out
+    SLICE_X29Y108        LUT6 (Prop_lut6_I1_O)        0.124    37.624 r  MultiplierInst/result_mantissa[43]_i_9/O
+                         net (fo=4, routed)           1.181    38.804    MultiplierInst/MULTIPL/s21[20]
+    SLICE_X30Y106        LUT6 (Prop_lut6_I0_O)        0.124    38.928 r  MultiplierInst/result_mantissa[42]_i_2/O
+                         net (fo=3, routed)           0.948    39.877    MultiplierInst/MULTIPL/s22[19]
+    SLICE_X31Y104        LUT4 (Prop_lut4_I0_O)        0.124    40.001 r  MultiplierInst/result_mantissa[42]_i_1/O
+                         net (fo=1, routed)           0.337    40.338    MultiplierInst/r[41]
+    SLICE_X33Y103        FDRE                                         r  MultiplierInst/result_mantissa_reg[42]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[41]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        39.328ns  (logic 5.026ns (12.780%)  route 34.302ns (87.220%))
+  Logic Levels:           36  (FDRE=1 LUT4=1 LUT6=34)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.747    36.482    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X33Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.606 r  MultiplierInst/result_mantissa[38]_i_2/O
+                         net (fo=3, routed)           1.008    37.614    MultiplierInst/MULTIPL/s22[15]
+    SLICE_X33Y107        LUT6 (Prop_lut6_I3_O)        0.124    37.738 r  MultiplierInst/result_mantissa[40]_i_3/O
+                         net (fo=3, routed)           0.957    38.695    MultiplierInst/MULTIPL/sumator23/cin27_out
+    SLICE_X29Y106        LUT4 (Prop_lut4_I3_O)        0.152    38.847 r  MultiplierInst/result_mantissa[41]_i_5/O
+                         net (fo=1, routed)           0.154    39.002    MultiplierInst/MULTIPL/sumator23/cin29_out
+    SLICE_X29Y106        LUT6 (Prop_lut6_I5_O)        0.326    39.328 r  MultiplierInst/result_mantissa[41]_i_1/O
+                         net (fo=1, routed)           0.000    39.328    MultiplierInst/r[40]
+    SLICE_X29Y106        FDRE                                         r  MultiplierInst/result_mantissa_reg[41]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[40]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        38.819ns  (logic 4.672ns (12.035%)  route 34.147ns (87.965%))
+  Logic Levels:           35  (FDRE=1 LUT4=1 LUT6=33)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.747    36.482    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X33Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.606 r  MultiplierInst/result_mantissa[38]_i_2/O
+                         net (fo=3, routed)           1.008    37.614    MultiplierInst/MULTIPL/s22[15]
+    SLICE_X33Y107        LUT6 (Prop_lut6_I3_O)        0.124    37.738 r  MultiplierInst/result_mantissa[40]_i_3/O
+                         net (fo=3, routed)           0.957    38.695    MultiplierInst/MULTIPL/sumator23/cin27_out
+    SLICE_X29Y106        LUT4 (Prop_lut4_I3_O)        0.124    38.819 r  MultiplierInst/result_mantissa[40]_i_1/O
+                         net (fo=1, routed)           0.000    38.819    MultiplierInst/r[39]
+    SLICE_X29Y106        FDRE                                         r  MultiplierInst/result_mantissa_reg[40]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[39]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        38.236ns  (logic 4.902ns (12.820%)  route 33.334ns (87.180%))
+  Logic Levels:           35  (FDRE=1 LUT4=1 LUT6=33)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.747    36.482    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X33Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.606 r  MultiplierInst/result_mantissa[38]_i_2/O
+                         net (fo=3, routed)           0.998    37.604    MultiplierInst/MULTIPL/s22[15]
+    SLICE_X33Y107        LUT4 (Prop_lut4_I0_O)        0.152    37.756 r  MultiplierInst/result_mantissa[39]_i_5/O
+                         net (fo=1, routed)           0.154    37.910    MultiplierInst/MULTIPL/sumator23/cin25_out
+    SLICE_X33Y107        LUT6 (Prop_lut6_I5_O)        0.326    38.236 r  MultiplierInst/result_mantissa[39]_i_1/O
+                         net (fo=1, routed)           0.000    38.236    MultiplierInst/r[38]
+    SLICE_X33Y107        FDRE                                         r  MultiplierInst/result_mantissa_reg[39]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_calc_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/result_mantissa_reg[38]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        38.058ns  (logic 4.548ns (11.950%)  route 33.510ns (88.050%))
+  Logic Levels:           34  (FDRE=1 LUT4=1 LUT6=32)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y102        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_calc_reg[1]/C
+    SLICE_X45Y102        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  MultiplierInst/A_mantissa_calc_reg[1]/Q
+                         net (fo=73, routed)          1.728     2.184    MultiplierInst/a[1]
+    SLICE_X46Y104        LUT6 (Prop_lut6_I4_O)        0.124     2.308 r  MultiplierInst/result_mantissa[25]_i_682/O
+                         net (fo=7, routed)           0.844     3.152    MultiplierInst/MULTIPL/sumator1/cin1_out
+    SLICE_X49Y104        LUT6 (Prop_lut6_I0_O)        0.124     3.276 r  MultiplierInst/result_mantissa[25]_i_663/O
+                         net (fo=5, routed)           0.827     4.103    MultiplierInst/MULTIPL/sumator2/cin1_out
+    SLICE_X49Y105        LUT6 (Prop_lut6_I5_O)        0.124     4.227 r  MultiplierInst/result_mantissa[25]_i_639/O
+                         net (fo=6, routed)           0.801     5.028    MultiplierInst/MULTIPL/sumator2/cin5_out
+    SLICE_X49Y106        LUT6 (Prop_lut6_I2_O)        0.124     5.152 r  MultiplierInst/result_mantissa[25]_i_606/O
+                         net (fo=4, routed)           0.821     5.973    MultiplierInst/MULTIPL/s2[6]
+    SLICE_X48Y107        LUT6 (Prop_lut6_I3_O)        0.124     6.097 r  MultiplierInst/result_mantissa[25]_i_561/O
+                         net (fo=4, routed)           1.347     7.444    MultiplierInst/MULTIPL/sumator3/cin9_out
+    SLICE_X46Y105        LUT6 (Prop_lut6_I5_O)        0.124     7.568 r  MultiplierInst/result_mantissa[25]_i_564/O
+                         net (fo=4, routed)           0.822     8.389    MultiplierInst/MULTIPL/sumator3/cin13_out
+    SLICE_X46Y106        LUT6 (Prop_lut6_I1_O)        0.124     8.513 r  MultiplierInst/result_mantissa[25]_i_508/O
+                         net (fo=3, routed)           0.831     9.344    MultiplierInst/MULTIPL/s4[8]
+    SLICE_X46Y107        LUT6 (Prop_lut6_I0_O)        0.124     9.468 r  MultiplierInst/result_mantissa[25]_i_437/O
+                         net (fo=4, routed)           1.039    10.507    MultiplierInst/MULTIPL/s5[7]
+    SLICE_X46Y108        LUT6 (Prop_lut6_I3_O)        0.124    10.631 r  MultiplierInst/result_mantissa[25]_i_380/O
+                         net (fo=4, routed)           1.155    11.786    MultiplierInst/MULTIPL/sumator6/cin11_out
+    SLICE_X46Y111        LUT6 (Prop_lut6_I0_O)        0.124    11.910 r  MultiplierInst/result_mantissa[25]_i_325/O
+                         net (fo=2, routed)           0.848    12.758    MultiplierInst/MULTIPL/sumator7/cin11_out
+    SLICE_X44Y110        LUT6 (Prop_lut6_I3_O)        0.124    12.882 r  MultiplierInst/result_mantissa[25]_i_273/O
+                         net (fo=3, routed)           0.980    13.862    MultiplierInst/MULTIPL/s7[9]
+    SLICE_X48Y112        LUT6 (Prop_lut6_I0_O)        0.124    13.986 r  MultiplierInst/result_mantissa[25]_i_252/O
+                         net (fo=6, routed)           1.030    15.016    MultiplierInst/MULTIPL/sumator8/cin13_out
+    SLICE_X46Y112        LUT6 (Prop_lut6_I3_O)        0.124    15.140 r  MultiplierInst/result_mantissa[25]_i_225/O
+                         net (fo=2, routed)           0.954    16.094    MultiplierInst/result_mantissa[25]_i_225_n_0
+    SLICE_X48Y115        LUT6 (Prop_lut6_I0_O)        0.124    16.218 r  MultiplierInst/result_mantissa[25]_i_187/O
+                         net (fo=3, routed)           1.013    17.231    MultiplierInst/MULTIPL/s10[8]
+    SLICE_X48Y116        LUT6 (Prop_lut6_I0_O)        0.124    17.355 r  MultiplierInst/result_mantissa[25]_i_148/O
+                         net (fo=6, routed)           1.209    18.564    MultiplierInst/MULTIPL/sumator11/cin11_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    18.688 r  MultiplierInst/result_mantissa[25]_i_121/O
+                         net (fo=6, routed)           0.838    19.526    MultiplierInst/MULTIPL/sumator11/cin15_out
+    SLICE_X46Y119        LUT6 (Prop_lut6_I0_O)        0.124    19.650 r  MultiplierInst/result_mantissa[25]_i_88/O
+                         net (fo=4, routed)           0.840    20.490    MultiplierInst/MULTIPL/sumator12/cin15_out
+    SLICE_X45Y119        LUT6 (Prop_lut6_I5_O)        0.124    20.614 r  MultiplierInst/result_mantissa[26]_i_72/O
+                         net (fo=4, routed)           0.678    21.293    MultiplierInst/MULTIPL/sumator12/cin19_out
+    SLICE_X43Y118        LUT6 (Prop_lut6_I5_O)        0.124    21.417 r  MultiplierInst/result_mantissa[29]_i_88/O
+                         net (fo=4, routed)           1.183    22.600    MultiplierInst/MULTIPL/sumator12/cin23_out
+    SLICE_X42Y121        LUT6 (Prop_lut6_I3_O)        0.124    22.724 r  MultiplierInst/result_mantissa[29]_i_74/O
+                         net (fo=5, routed)           1.140    23.865    MultiplierInst/MULTIPL/s12[15]
+    SLICE_X36Y122        LUT6 (Prop_lut6_I0_O)        0.124    23.989 r  MultiplierInst/result_mantissa[29]_i_66/O
+                         net (fo=4, routed)           1.093    25.081    MultiplierInst/MULTIPL/s13[14]
+    SLICE_X34Y122        LUT6 (Prop_lut6_I5_O)        0.124    25.205 r  MultiplierInst/result_mantissa[31]_i_48/O
+                         net (fo=4, routed)           1.305    26.511    MultiplierInst/MULTIPL/s14[14]
+    SLICE_X35Y122        LUT6 (Prop_lut6_I5_O)        0.124    26.635 r  MultiplierInst/result_mantissa[31]_i_36/O
+                         net (fo=5, routed)           1.262    27.897    MultiplierInst/MULTIPL/s15[14]
+    SLICE_X33Y121        LUT6 (Prop_lut6_I5_O)        0.124    28.021 r  MultiplierInst/result_mantissa[31]_i_29/O
+                         net (fo=3, routed)           0.590    28.611    MultiplierInst/MULTIPL/s16[14]
+    SLICE_X33Y120        LUT6 (Prop_lut6_I0_O)        0.124    28.735 r  MultiplierInst/result_mantissa[33]_i_27/O
+                         net (fo=6, routed)           0.808    29.542    MultiplierInst/MULTIPL/sumator17/cin23_out
+    SLICE_X31Y120        LUT6 (Prop_lut6_I5_O)        0.124    29.666 r  MultiplierInst/result_mantissa[35]_i_27/O
+                         net (fo=6, routed)           0.693    30.359    MultiplierInst/MULTIPL/sumator17/cin27_out
+    SLICE_X30Y120        LUT6 (Prop_lut6_I2_O)        0.124    30.483 r  MultiplierInst/result_mantissa[37]_i_32/O
+                         net (fo=4, routed)           1.321    31.804    MultiplierInst/MULTIPL/s17[17]
+    SLICE_X29Y118        LUT6 (Prop_lut6_I3_O)        0.124    31.928 r  MultiplierInst/result_mantissa[37]_i_18/O
+                         net (fo=4, routed)           1.177    33.106    MultiplierInst/MULTIPL/sumator18/cin31_out
+    SLICE_X30Y116        LUT6 (Prop_lut6_I1_O)        0.124    33.230 r  MultiplierInst/result_mantissa[37]_i_10/O
+                         net (fo=3, routed)           1.076    34.306    MultiplierInst/MULTIPL/s19[17]
+    SLICE_X30Y111        LUT6 (Prop_lut6_I0_O)        0.124    34.430 r  MultiplierInst/result_mantissa[39]_i_11/O
+                         net (fo=6, routed)           1.181    35.611    MultiplierInst/MULTIPL/sumator20/cin29_out
+    SLICE_X30Y110        LUT6 (Prop_lut6_I1_O)        0.124    35.735 r  MultiplierInst/result_mantissa[39]_i_9/O
+                         net (fo=4, routed)           0.747    36.482    MultiplierInst/MULTIPL/s21[16]
+    SLICE_X33Y108        LUT6 (Prop_lut6_I0_O)        0.124    36.606 r  MultiplierInst/result_mantissa[38]_i_2/O
+                         net (fo=3, routed)           0.998    37.604    MultiplierInst/MULTIPL/s22[15]
+    SLICE_X33Y107        LUT4 (Prop_lut4_I0_O)        0.124    37.728 r  MultiplierInst/result_mantissa[38]_i_1/O
+                         net (fo=1, routed)           0.330    38.058    MultiplierInst/r[37]
+    SLICE_X33Y106        FDRE                                         r  MultiplierInst/result_mantissa_reg[38]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 MultiplierInst/B_exp_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/B_exp_calc_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.207ns  (logic 0.148ns (71.500%)  route 0.059ns (28.500%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y102        FDRE                         0.000     0.000 r  MultiplierInst/B_exp_reg[5]/C
+    SLICE_X38Y102        FDRE (Prop_fdre_C_Q)         0.148     0.148 r  MultiplierInst/B_exp_reg[5]/Q
+                         net (fo=1, routed)           0.059     0.207    MultiplierInst/B_exp[5]
+    SLICE_X39Y102        FDRE                                         r  MultiplierInst/B_exp_calc_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/B_mantissa_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/B_mantissa_calc_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.207ns  (logic 0.148ns (71.500%)  route 0.059ns (28.500%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y102        FDRE                         0.000     0.000 r  MultiplierInst/B_mantissa_reg[2]/C
+    SLICE_X38Y102        FDRE (Prop_fdre_C_Q)         0.148     0.148 r  MultiplierInst/B_mantissa_reg[2]/Q
+                         net (fo=1, routed)           0.059     0.207    MultiplierInst/B_mantissa[2]
+    SLICE_X39Y102        FDRE                                         r  MultiplierInst/B_mantissa_calc_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/B_mantissa_reg[11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/B_mantissa_calc_reg[11]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.207ns  (logic 0.148ns (71.328%)  route 0.059ns (28.672%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y102        FDRE                         0.000     0.000 r  MultiplierInst/B_mantissa_reg[11]/C
+    SLICE_X38Y102        FDRE (Prop_fdre_C_Q)         0.148     0.148 r  MultiplierInst/B_mantissa_reg[11]/Q
+                         net (fo=1, routed)           0.059     0.207    MultiplierInst/B_mantissa[11]
+    SLICE_X39Y102        FDRE                                         r  MultiplierInst/B_mantissa_calc_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_exp_reg[4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/A_exp_calc_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.242ns  (logic 0.141ns (58.263%)  route 0.101ns (41.737%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y98         FDRE                         0.000     0.000 r  MultiplierInst/A_exp_reg[4]/C
+    SLICE_X39Y98         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  MultiplierInst/A_exp_reg[4]/Q
+                         net (fo=1, routed)           0.101     0.242    MultiplierInst/A_exp[4]
+    SLICE_X40Y98         FDRE                                         r  MultiplierInst/A_exp_calc_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/B_mantissa_reg[22]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/B_mantissa_calc_reg[22]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.243ns  (logic 0.141ns (58.024%)  route 0.102ns (41.976%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y105        FDRE                         0.000     0.000 r  MultiplierInst/B_mantissa_reg[22]/C
+    SLICE_X39Y105        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  MultiplierInst/B_mantissa_reg[22]/Q
+                         net (fo=1, routed)           0.102     0.243    MultiplierInst/B_mantissa[22]
+    SLICE_X41Y105        FDRE                                         r  MultiplierInst/B_mantissa_calc_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/B_exp_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/B_exp_calc_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.244ns  (logic 0.128ns (52.512%)  route 0.116ns (47.488%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y101        FDRE                         0.000     0.000 r  MultiplierInst/B_exp_reg[7]/C
+    SLICE_X39Y101        FDRE (Prop_fdre_C_Q)         0.128     0.128 r  MultiplierInst/B_exp_reg[7]/Q
+                         net (fo=1, routed)           0.116     0.244    MultiplierInst/B_exp[7]
+    SLICE_X38Y101        FDRE                                         r  MultiplierInst/B_exp_calc_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_reg[21]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/A_mantissa_calc_reg[21]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.244ns  (logic 0.141ns (57.821%)  route 0.103ns (42.179%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y101        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_reg[21]/C
+    SLICE_X40Y101        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  MultiplierInst/A_mantissa_reg[21]/Q
+                         net (fo=1, routed)           0.103     0.244    MultiplierInst/A_mantissa[21]
+    SLICE_X38Y101        FDRE                                         r  MultiplierInst/A_mantissa_calc_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_reg[17]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/A_mantissa_calc_reg[17]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.248ns  (logic 0.141ns (56.815%)  route 0.107ns (43.185%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y101        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_reg[17]/C
+    SLICE_X39Y101        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  MultiplierInst/A_mantissa_reg[17]/Q
+                         net (fo=1, routed)           0.107     0.248    MultiplierInst/A_mantissa[17]
+    SLICE_X39Y102        FDRE                                         r  MultiplierInst/A_mantissa_calc_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/B_mantissa_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/B_mantissa_calc_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.251ns  (logic 0.141ns (56.174%)  route 0.110ns (43.826%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y104        FDRE                         0.000     0.000 r  MultiplierInst/B_mantissa_reg[3]/C
+    SLICE_X45Y104        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  MultiplierInst/B_mantissa_reg[3]/Q
+                         net (fo=1, routed)           0.110     0.251    MultiplierInst/B_mantissa[3]
+    SLICE_X44Y104        FDRE                                         r  MultiplierInst/B_mantissa_calc_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 MultiplierInst/A_mantissa_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            MultiplierInst/A_mantissa_calc_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.253ns  (logic 0.141ns (55.730%)  route 0.112ns (44.270%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y101        FDRE                         0.000     0.000 r  MultiplierInst/A_mantissa_reg[1]/C
+    SLICE_X45Y101        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  MultiplierInst/A_mantissa_reg[1]/Q
+                         net (fo=1, routed)           0.112     0.253    MultiplierInst/A_mantissa[1]
+    SLICE_X45Y102        FDRE                                         r  MultiplierInst/A_mantissa_calc_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

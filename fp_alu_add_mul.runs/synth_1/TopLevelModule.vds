@@ -1,0 +1,385 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Jan 16 06:13:42 2025
+# Process ID: 10436
+# Current directory: E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.runs/synth_1
+# Command line: vivado.exe -log TopLevelModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevelModule.tcl
+# Log file: E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.runs/synth_1/TopLevelModule.vds
+# Journal file: E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.runs/synth_1\vivado.jou
+# Running On: DESKTOP-F4G4IM7, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12729 MB
+#-----------------------------------------------------------
+source TopLevelModule.tcl -notrace
+create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 394.859 ; gain = 73.469
+Command: synth_design -top TopLevelModule -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18760
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Vivado2022.2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 832.234 ; gain = 412.496
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TopLevelModule' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TopLevelModule.vhd:19]
+INFO: [Synth 8-3491] module 'FloatingPointAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:5' bound to instance 'AdderInst' of component 'FloatingPointAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TopLevelModule.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'FloatingPointAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:15]
+INFO: [Synth 8-3491] module 'EdgeCaseResolverAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/EdgeCaseResolverAdder.vhd:5' bound to instance 'EDGECASE' of component 'EdgeCaseResolverAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'EdgeCaseResolverAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/EdgeCaseResolverAdder.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'EdgeCaseResolverAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/EdgeCaseResolverAdder.vhd:12]
+INFO: [Synth 8-3491] module 'AllignerAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:5' bound to instance 'ALLIGN' of component 'AllignerAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'AllignerAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:16]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder9b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:6' bound to instance 'EXPDIFF' of component 'CarryLookaheadAdder9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'CarryLookaheadAdder9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:14]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add1' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'FullAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:14]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add2' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:71]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add3' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:72]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add4' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:73]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add5' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:74]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add6' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:75]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add7' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:76]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add8' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:77]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'Add9' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'CarryLookaheadAdder9b' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:14]
+INFO: [Synth 8-3491] module 'TwosComplement9b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement9b.vhd:6' bound to instance 'TWOCOMPL' of component 'TwosComplement9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'TwosComplement9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement9b.vhd:11]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder9b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:6' bound to instance 'adder' of component 'CarryLookaheadAdder9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement9b.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'TwosComplement9b' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement9b.vhd:11]
+INFO: [Synth 8-3491] module 'ShifterAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/ShifterAdder.vhd:5' bound to instance 'SHIFTA' of component 'ShifterAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'ShifterAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/ShifterAdder.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'ShifterAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/ShifterAdder.vhd:11]
+INFO: [Synth 8-3491] module 'ShifterAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/ShifterAdder.vhd:5' bound to instance 'SHIFTB' of component 'ShifterAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'AllignerAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/AllignerAdder.vhd:16]
+INFO: [Synth 8-3491] module 'MantissaCalculatorAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:5' bound to instance 'MANTISSACALC' of component 'MantissaCalculatorAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'MantissaCalculatorAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:14]
+INFO: [Synth 8-3491] module 'TwosComplement25b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement25b.vhd:6' bound to instance 'B_TWOCOMPL' of component 'TwosComplement25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'TwosComplement25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement25b.vhd:11]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder25b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:6' bound to instance 'adder' of component 'CarryLookaheadAdder25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement25b.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'CarryLookaheadAdder25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:14]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA0' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:132]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA1' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:133]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA2' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:134]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA3' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:135]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA4' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:136]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA5' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:137]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA6' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:138]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA7' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:139]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA8' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:140]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA9' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:141]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA10' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:142]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA11' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:143]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA12' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:144]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA13' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:145]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA14' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:146]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA15' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:147]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA16' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:148]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA17' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:149]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA18' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:150]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA19' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:151]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA20' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:152]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA21' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:153]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA22' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:154]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA23' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:155]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA24' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'CarryLookaheadAdder25b' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'TwosComplement25b' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement25b.vhd:11]
+INFO: [Synth 8-3491] module 'TwosComplement25b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TwosComplement25b.vhd:6' bound to instance 'A_TWOCOMPL' of component 'TwosComplement25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:42]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder25b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:6' bound to instance 'ADD_AB' of component 'CarryLookaheadAdder25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:46]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder25b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:6' bound to instance 'SUB_AB' of component 'CarryLookaheadAdder25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:53]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder25b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder25b.vhd:6' bound to instance 'SUB_BA' of component 'CarryLookaheadAdder25b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'MantissaCalculatorAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaCalculatorAdder.vhd:14]
+INFO: [Synth 8-3491] module 'MantissaNormalizerAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaNormalizerAdder.vhd:5' bound to instance 'MANRISSANORM' of component 'MantissaNormalizerAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'MantissaNormalizerAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaNormalizerAdder.vhd:12]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder9b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:6' bound to instance 'EXPPLUS' of component 'CarryLookaheadAdder9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaNormalizerAdder.vhd:33]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder9b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder9b.vhd:6' bound to instance 'EXPMINUS' of component 'CarryLookaheadAdder9b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaNormalizerAdder.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'MantissaNormalizerAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MantissaNormalizerAdder.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'FloatingPointAdder' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:15]
+INFO: [Synth 8-3491] module 'FloatingPointMultiplier' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointMultiplier.vhd:5' bound to instance 'MultiplierInst' of component 'FloatingPointMultiplier' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TopLevelModule.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'FloatingPointMultiplier' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointMultiplier.vhd:15]
+INFO: [Synth 8-3491] module 'EdgeCaseResolverMultiplier' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/EdgeCaseResolverMultiplier.vhd:5' bound to instance 'EDGECASE' of component 'EdgeCaseResolverMultiplier' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointMultiplier.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'EdgeCaseResolverMultiplier' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/EdgeCaseResolverMultiplier.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'EdgeCaseResolverMultiplier' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/EdgeCaseResolverMultiplier.vhd:12]
+INFO: [Synth 8-3491] module 'MatrixMultiplicator' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:4' bound to instance 'MULTIPL' of component 'MatrixMultiplicator' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointMultiplier.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'MatrixMultiplicator' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:10]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator1' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:12]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA0' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:57]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA1' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:58]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA2' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:59]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA3' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:60]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA4' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:61]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA5' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:62]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA6' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:63]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA7' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:64]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA8' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:65]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA9' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:66]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA10' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:67]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA11' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:68]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA12' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:69]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA13' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:70]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA14' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:71]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA15' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:72]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA16' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:73]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA17' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:74]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA18' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:75]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA19' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:76]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA20' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:77]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA21' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:78]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA22' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:79]
+INFO: [Synth 8-3491] module 'FullAdder' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FullAdder.vhd:6' bound to instance 'FA23' of component 'FullAdder' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'CarryLookaheadAdder24b' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:12]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator2' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:40]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator3' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:47]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator4' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:54]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator5' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:61]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator6' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:68]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator7' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:75]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator8' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:82]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator9' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:89]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator10' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:96]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator11' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:103]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator12' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:110]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator13' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:117]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator14' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:124]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator15' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:131]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator16' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:138]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator17' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:145]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator18' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:152]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator19' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:159]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator20' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:166]
+INFO: [Synth 8-3491] module 'CarryLookaheadAdder24b' declared at 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/CarryLookaheadAdder24b.vhd:6' bound to instance 'sumator21' of component 'CarryLookaheadAdder24b' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:173]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'MatrixMultiplicator' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/MatrixMultiplicator.vhd:10]
+INFO: [Synth 8-638] synthesizing module 'ExpCalcMultiplier' [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/ExpCalcMultiplier.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'ExpCalcMultiplier' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/ExpCalcMultiplier.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'FloatingPointMultiplier' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointMultiplier.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'TopLevelModule' (0#1) [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/TopLevelModule.vhd:19]
+WARNING: [Synth 8-6014] Unused sequential element A_exp_reg was removed.  [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:153]
+WARNING: [Synth 8-6014] Unused sequential element A_mantissa_reg was removed.  [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:154]
+WARNING: [Synth 8-6014] Unused sequential element B_exp_reg was removed.  [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:156]
+WARNING: [Synth 8-6014] Unused sequential element B_mantissa_reg was removed.  [E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.srcs/sources_1/new/FloatingPointAdder.vhd:157]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 931.617 ; gain = 511.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 931.617 ; gain = 511.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 931.617 ; gain = 511.879
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FloatingPointAdder'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FloatingPointMultiplier'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              wait_state |                              000 |                              000
+     check_invalid_state |                              001 |                              001
+  detected_invalid_state |                              010 |                              010
+            allign_state |                              011 |                              011
+          addition_state |                              100 |                              100
+         normalize_state |                              101 |                              101
+            output_state |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'FloatingPointAdder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              wait_state |                           000001 |                              000
+     check_invalid_state |                           000010 |                              001
+  detected_invalid_state |                           000100 |                              101
+               mul_state |                           001000 |                              010
+            output_state |                           010000 |                              100
+                  iSTATE |                           100000 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FloatingPointMultiplier'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 931.617 ; gain = 511.879
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 731   
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 8     
+	               25 Bit    Registers := 4     
+	               24 Bit    Registers := 4     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   8 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 9     
+	   8 Input   25 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 3     
+	   8 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 13    
+	   6 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (MultiplierInst/FSM_onehot_state_reg[5]) is unused and will be removed from module TopLevelModule.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:38 . Memory (MB): peak = 1301.832 ; gain = 882.094
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:39 . Memory (MB): peak = 1301.832 ; gain = 882.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:11 ; elapsed = 00:02:44 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:31 ; elapsed = 00:03:05 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:31 ; elapsed = 00:03:05 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:31 ; elapsed = 00:03:05 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:31 ; elapsed = 00:03:05 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:32 ; elapsed = 00:03:06 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:32 ; elapsed = 00:03:06 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT2   |   583|
+|4     |LUT3   |    96|
+|5     |LUT4   |   253|
+|6     |LUT5   |   197|
+|7     |LUT6   |  1284|
+|8     |MUXF7  |     1|
+|9     |FDCE   |    73|
+|10    |FDPE   |     1|
+|11    |FDRE   |   466|
+|12    |IBUF   |    68|
+|13    |OBUF   |    66|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+------------------------+------+
+|      |Instance         |Module                  |Cells |
++------+-----------------+------------------------+------+
+|1     |top              |                        |  3094|
+|2     |  AdderInst      |FloatingPointAdder      |   939|
+|3     |    ALLIGN       |AllignerAdder           |     2|
+|4     |    MANTISSACALC |MantissaCalculatorAdder |   102|
+|5     |  MultiplierInst |FloatingPointMultiplier |  2020|
++------+-----------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:32 ; elapsed = 00:03:06 . Memory (MB): peak = 1310.855 ; gain = 891.117
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:32 ; elapsed = 00:03:06 . Memory (MB): peak = 1310.855 ; gain = 891.117
+Synthesis Optimization Complete : Time (s): cpu = 00:02:32 ; elapsed = 00:03:06 . Memory (MB): peak = 1310.855 ; gain = 891.117
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1313.668 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1317.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 98b9f910
+INFO: [Common 17-83] Releasing license: Synthesis
+152 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:41 ; elapsed = 00:03:16 . Memory (MB): peak = 1317.355 ; gain = 922.496
+INFO: [Common 17-1381] The checkpoint 'E:/SSC_Proj_Stefania/fp_alu_add_mul/fp_alu_add_mul.runs/synth_1/TopLevelModule.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopLevelModule_utilization_synth.rpt -pb TopLevelModule_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 16 06:17:30 2025...
