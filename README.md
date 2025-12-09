@@ -1,8 +1,8 @@
 # Floating-Point ALU (IEEE-754 Single Precision)
 
-This project implements a floating-point ALU in VHDL, supporting IEEE-754 single-precision addition and multiplication. 
+This project implements a floating-point ALU in VHDL, supporting IEEE-754 single-precision addition and multiplication. It uses Vivado 2022.2.
 
-The design includes exponent alignment, mantissa processing, normalization, rounding, exception handling, and full simulation through custom Vivado testbenches. The ALU integrates modular components such as adders, shifters, normalizers, matrix multipliers, and edge-case handlers.
+The design includes exponent alignment, mantissa processing, normalization, rounding, exception handling, and full simulation testbench. The ALU integrates modular components such as adders, shifters, normalizers, matrix multipliers, and edge-case handlers.
 
 ## Features
 - IEEE-754 single-precision floating-point addition
